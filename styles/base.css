@@ -876,6 +876,12 @@ form#contactForm {
 
   .trips article {
     width: 90%;
+    display: flex;
+  align-items: center;
+  }
+
+  .trips article p {
+    flex: 3;
   }
 
   .trips h1 {
