@@ -603,6 +603,12 @@ footer {
   background-color: #223055;
   color: #fff;
   padding: 1rem 1rem 2rem;
+  display: grid;
+  grid-template-columns: auto minmax(min-content, 580px);
+  grid-template-areas:
+    ". h"
+    ". p"
+    ". f";
 }
 .form p {
   font-weight: 300;
@@ -613,6 +619,15 @@ footer {
 form#contactForm {
   max-width: 350px;
   margin: auto;
+  grid-area: f;
+  display: grid;
+  grid-template-areas:
+    "name ph"
+    "email news"
+    "radio radio"
+    "msg msg"
+    "btn .";
+  grid-gap: 1rem;
 }
 
 .contactForm div {
@@ -771,21 +786,27 @@ form#contactForm {
 }
 
 .contactForm div:nth-child(1) {
+  grid-area: name;
 }
 
 .contactForm div:nth-child(2) {
+  grid-area: ph;
 }
 
 .contactForm div:nth-child(3) {
+  grid-area: email;
 }
 
 .contactForm div:nth-child(4) {
+  grid-area: radio;
 }
 
 .contactForm div:nth-child(5) {
+  grid-area: msg;
 }
 
 .contactForm div:nth-child(6) {
+  grid-area: btn;
   margin: 1.8rem 0 0;
 }
 
